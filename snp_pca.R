@@ -53,7 +53,7 @@ tab$genus <- str_split_fixed(tab$pop, "_", 2)[,1] # since my popinfo file didnt 
 tab$loc <- str_split_fixed(tab$pop, "_", 2)[,2]
 
 ## test run
-plot(tab$EV2, tab$EV1, col=as.integer(tab$info.1), col=as.integer(tab$info.2), xlab="PC2 5.6%", ylab="PC1 5.2%")
+plot(tab$EV2, tab$EV1, col=as.integer(tab$info.1), xlab="PC2 5.6%", ylab="PC1 5.2%")
 legend("topleft", legend=levels(tab$pop), pch="o", col=1:nlevels(tab$pop))
 
 lbls <- paste("PC", 1:4, "\n", format(pc.percent[1:4], digits=2), "%", sep="")
